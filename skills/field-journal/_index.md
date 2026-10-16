@@ -6,10 +6,10 @@
 
 ## 统计
 
-- 真实项目数：21
+- 真实项目数：25
 - 种子参考数：17
-- 总条目数：38
-- 最近更新：2026-09-03
+- 总条目数：42
+- 最近更新：2026-10-16
 
 ## 按场景分类
 
@@ -49,6 +49,7 @@
 - [[种子] seed-006_ssrf-cloud-metadata](./seed-006_ssrf-cloud-metadata.md)
 - [[种子] seed-017_xxe-oob-exfil](./seed-017_xxe-oob-exfil.md)
 
+- [2026-10-16 CDP 补 Playwright 拿不到的运行时证据（initiator 调用栈 / 断点取参）](./2026-10-16_cdp-runtime-recovery-vs-playwright.md)
 ### 企业内网 / 云安全
 
 - [[种子] seed-005_ad-certipy-esc1](./seed-005_ad-certipy-esc1.md)
@@ -68,6 +69,9 @@
 - [2026-08-08 平台无关结构化路由 PR 集成](./2026-08-08_client-neutral-structured-routing-pr-integration.md)
 - [2026-07-20_reverse-toolchain-windows-bootstrap](./2026-07-20_reverse-toolchain-windows-bootstrap.md)
 
+- [2026-10-16 中文紧贴 ASCII 关键词导致 \b 词边界失效（.NET 与 Python 双引擎同样受影响）](./2026-10-16_cjk-adjacent-ascii-word-boundary-routing-failure.md)
+- [2026-10-16 境内访问境外 API 的传输层三重坑（Node fetch 不读代理 / CF 指纹 / execFile 经 GBK 破坏 UTF-8）](./2026-10-16_cn-network-transport-triple-trap.md)
+- [2026-10-16 工具索引 .md/.json 双份漂移、PowerShell 5.1 属性赋值回滚、换行符三连坑](./2026-10-16_tool-index-dual-desync-and-scripting-traps.md)
 ### 其他
 
 - [2026-08-08 开放 PR 价值分级与安全集成](./2026-08-08_pr-value-triage-and-safe-integration.md)
@@ -86,6 +90,22 @@
 
 - [1 KiB 自带掩码 ROR/XOR、Cortex-M 向量 crib、跨固件验证](./2026-08-06_cortex-m-msc-firmware-self-keyed-rotate-xor.md)
 
+### 跨引擎文本匹配与词边界
+
+- [CJK 紧贴 ASCII 时 \b 失效，.NET 与 Python 同时中招；基准用例的「无空格」覆盖盲区](./2026-10-16_cjk-adjacent-ascii-word-boundary-routing-failure.md)
+
+### 境内访问境外 API 的传输层
+
+- [curl 作传输层：读系统代理、过 CF 指纹、body 走临时文件避开 GBK 破坏中文、windowsHide 防弹窗](./2026-10-16_cn-network-transport-triple-trap.md)
+
+### 浏览器运行时取证（CDP 直连）
+
+- [initiator.stack 恢复调用来源、压缩脚本断点必须给 columnNumber、enable 与监听器顺序](./2026-10-16_cdp-runtime-recovery-vs-playwright.md)
+
+### 索引与清单一致性
+
+- [多格式索引必须逐项核对；PowerShell PSCustomObject 属性存在性保护；二进制读写保换行符](./2026-10-16_tool-index-dual-desync-and-scripting-traps.md)
+
 ## 实体倒排（按目标特征）
 
 ### 多宿主安全技能路由包
@@ -100,6 +120,15 @@
 ### Cortex-M USB MSC 升级器
 
 - [应用/驻留 bootloader 边界与虚拟磁盘写入链路](./2026-08-06_cortex-m-msc-firmware-self-keyed-rotate-xor.md)
+
+### 本地逆向技能路由包（含本地化修复与执行层桥接）
+
+- [路由规则的中文边界缺陷、R3 关键词缺口与基准配对用例](./2026-10-16_cjk-adjacent-ascii-word-boundary-routing-failure.md)
+- [工具索引双份漂移与登记脚本的 PowerShell 陷阱](./2026-10-16_tool-index-dual-desync-and-scripting-traps.md)
+
+### 打包 SPA（无 source map）
+
+- [CDP 恢复运行时调用栈与断点入参](./2026-10-16_cdp-runtime-recovery-vs-playwright.md)
 
 ## 使用说明
 
