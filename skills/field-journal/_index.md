@@ -6,10 +6,10 @@
 
 ## 统计
 
-- 真实项目数：21
+- 真实项目数：22
 - 种子参考数：17
-- 总条目数：38
-- 最近更新：2026-09-03
+- 总条目数：39
+- 最近更新：2026-10-16
 
 ## 按场景分类
 
@@ -21,6 +21,7 @@
 
 ### 二进制 / 固件 / CTF
 
+- [2026-10-16 Go+Wails 用量看板全逻辑还原（stripped 无符号：手工 pclntab/functab + 字节级字符串还原）](./2026-10-16_wails-go-usage-dashboard-stripped-re.md)
 - [2026-08-06_cortex-m-msc-firmware-self-keyed-rotate-xor](./2026-08-06_cortex-m-msc-firmware-self-keyed-rotate-xor.md)
 - [2026-07-22 Electron Bytenode 特权更新链分析](./2026-07-22_electron-bytenode-privileged-update-chain.md)
 - [2026-07-14_android-arm64-self-extract-source-recovery](./2026-07-14_android-arm64-self-extract-source-recovery.md)
@@ -86,7 +87,15 @@
 
 - [1 KiB 自带掩码 ROR/XOR、Cortex-M 向量 crib、跨固件验证](./2026-08-06_cortex-m-msc-firmware-self-keyed-rotate-xor.md)
 
+### Go stripped 符号恢复与逻辑还原
+
+- [手工 pclntab/functab 恢复（GoReSym 失败分支）、LEA+len 精确字符串配对、时间常量三角验证](./2026-10-16_wails-go-usage-dashboard-stripped-re.md)
+
 ## 实体倒排（按目标特征）
+
+### Wails v2 / Go-stripped Windows 桌面应用
+
+- [Wails bindings/events 接口面还原、OSCrypt(DPAPI+AES-GCM) 凭据链识别、SQLite 增量扫描位点模型](./2026-10-16_wails-go-usage-dashboard-stripped-re.md)
 
 ### 多宿主安全技能路由包
 
