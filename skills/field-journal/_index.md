@@ -6,9 +6,9 @@
 
 ## 统计
 
-- 真实项目数：25
+- 真实项目数：34
 - 种子参考数：17
-- 总条目数：42
+- 总条目数：51
 - 最近更新：2026-10-16
 
 ## 按场景分类
@@ -34,6 +34,8 @@
 
 ### Web / API / 渗透测试
 
+- [2026-10-16 Vue SPA 无源码站点契约保真复刻（运行时探测优先）](./2026-10-16_vue-spa-contract-replication-runtime-probe.md)
+
 - [2026-08-01 Next.js CDK 契约保真本地重建](./2026-08-01_nextjs-cdk-contract-faithful-local-reconstruction.md)
 - [2026-08-01_pentest-encryption-oracle-public-template-sql-admin-takeover: .NET CMS 通用加密 oracle、公开密文模板消费者、完整 STL/模板解析、原始 SQL `UPDATE RETURNING`、官方管理员验证器新旧口令差分与隔离 PostgreSQL 清理闭环](./2026-08-01_pentest-encryption-oracle-public-template-sql-admin-takeover.md)
 
@@ -50,6 +52,7 @@
 - [[种子] seed-017_xxe-oob-exfil](./seed-017_xxe-oob-exfil.md)
 
 - [2026-10-16 CDP 补 Playwright 拿不到的运行时证据（initiator 调用栈 / 断点取参）](./2026-10-16_cdp-runtime-recovery-vs-playwright.md)
+- [2026-10-16 1:1 复刻保真验证要分三层：实现有无 → 数值一致 → **响应结构一致**（第三层才抓到字段级差异）](./2026-10-16_fidelity-verification-layering.md)
 ### 企业内网 / 云安全
 
 - [[种子] seed-005_ad-certipy-esc1](./seed-005_ad-certipy-esc1.md)
@@ -72,6 +75,8 @@
 - [2026-10-16 中文紧贴 ASCII 关键词导致 \b 词边界失效（.NET 与 Python 双引擎同样受影响）](./2026-10-16_cjk-adjacent-ascii-word-boundary-routing-failure.md)
 - [2026-10-16 境内访问境外 API 的传输层三重坑（Node fetch 不读代理 / CF 指纹 / execFile 经 GBK 破坏 UTF-8）](./2026-10-16_cn-network-transport-triple-trap.md)
 - [2026-10-16 工具索引 .md/.json 双份漂移、PowerShell 5.1 属性赋值回滚、换行符三连坑](./2026-10-16_tool-index-dual-desync-and-scripting-traps.md)
+- [2026-10-16 CDP 取证工具的六类静默失败（导航重置 Debugger 域 / 脚本数偏少不报警 / 选项漏接）](./2026-10-16_cdp-tooling-timing-and-option-traps.md)
+- [2026-10-16 CDP 调试会话的运维坑（临时 profile 被清理丢登录态 / 端口 LISTENING ≠ CDP）](./2026-10-16_cdp-session-profile-and-port-pitfalls.md)
 ### 其他
 
 - [2026-08-08 开放 PR 价值分级与安全集成](./2026-08-08_pr-value-triage-and-safe-integration.md)
@@ -106,6 +111,18 @@
 
 - [多格式索引必须逐项核对；PowerShell PSCustomObject 属性存在性保护；二进制读写保换行符](./2026-10-16_tool-index-dual-desync-and-scripting-traps.md)
 
+### 静默失败与横切能力
+
+- [收集类操作要做数量合理性检查；横切能力（导航/触发/日志）应统一入口，别逐条命令接线](./2026-10-16_cdp-tooling-timing-and-option-traps.md)
+
+### 浏览器调试会话运维
+
+- [profile 别放临时目录；端口 LISTENING ≠ CDP，要 curl /json/version 验 Browser 字段](./2026-10-16_cdp-session-profile-and-port-pitfalls.md)
+
+### 复刻保真验收
+
+- [三层验证：有没有 → 对不对 → **长得一样吗**；第三层要跑真实接口，且只调 GET](./2026-10-16_fidelity-verification-layering.md)
+
 ## 实体倒排（按目标特征）
 
 ### 多宿主安全技能路由包
@@ -129,6 +146,15 @@
 ### 打包 SPA（无 source map）
 
 - [CDP 恢复运行时调用栈与断点入参](./2026-10-16_cdp-runtime-recovery-vs-playwright.md)
+
+### 自研 CDP 取证工具链
+
+- [导航重置 Debugger 域、脚本数偏少静默不完整、带值选项漏登记（同一坑踩三次）](./2026-10-16_cdp-tooling-timing-and-option-traps.md)
+- [调试 profile 被临时目录清理丢登录态、9222 被日常 Chrome 占用导致误判](./2026-10-16_cdp-session-profile-and-port-pitfalls.md)
+
+### 网站 1:1 复刻验收
+
+- [响应结构级差分：字段缺失在「有实现」「数值对」两层全绿时完全看不见](./2026-10-16_fidelity-verification-layering.md)
 
 ## 使用说明
 
